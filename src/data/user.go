@@ -38,9 +38,6 @@ func (r *usersRepository) LoginUser(email string, password string) (*model.User,
 	var user model.User
 
 	var respData model.ResponseData
-
-	// response := usersRestClient.Post("/api/v1/users/login", request)
-
 	client := resty.New()
 	client.SetHostURL("http://localhost:9090")
 
